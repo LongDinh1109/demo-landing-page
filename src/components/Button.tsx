@@ -37,7 +37,7 @@ export default function Button({
   return (
     <button
       className={` ${
-        icon ? "pl-5 pr-2" : "px-5"
+        icon ? "px-1 sm:pl-5 sm:pr-2" : "px-5"
       } py-2 rounded-full text-[16px] hover:opacity-50 ${style.button}`}
       {...props}
     >
