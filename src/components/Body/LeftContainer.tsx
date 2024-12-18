@@ -1,10 +1,11 @@
 import Button from "../Button";
 import { ArrowDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
+
 export default function LeftContainer() {
   return (
     <>
-      <div className="md:w-1/2 py-10 md:py-24">
+      <div className="w-full lg:w-1/2">
         <h1 className="font-bold text-xl mb-5">
           Close More Deals by{" "}
           <span className="text-primary">Instantly Matching</span> Buyers to the

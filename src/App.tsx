@@ -7,8 +7,10 @@ function App() {
   return (
     <>
       <div className="font-lato">
-        <Header />
-        <Body />
+        <div className="bg-[url('./assets/Grid.png')] bg-cover bg-no-repeat">
+          <Header />
+          <Body />
+        </div>
         <Footer />
       </div>
     </>

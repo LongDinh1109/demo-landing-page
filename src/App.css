@@ -7,3 +7,7 @@
 body{
   background-color: #EFF3F9;
 }
+
+.scroll {
+  -webkit-mask-image :-webkit-linear-gradient(1turn,transparent,#fff 10%,#fff 90%,transparent)
+}

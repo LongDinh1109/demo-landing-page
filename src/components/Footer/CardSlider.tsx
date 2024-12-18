@@ -10,24 +10,35 @@ type CardSliderProps = {
   mode: "left" | "right";
 };
 export default function CardSlider({ CardData, mode }: CardSliderProps) {
-  const styles = {
-    left: "translate-x-[-50px]",
-    right: "translate-x-[50px]",
+  const animation = {
+    left: "animate-infinite-scroll-left",
+    right: "animate-infinite-scroll-right",
   };
 
   return (
-    <div className={`flex justify-center gap-6 w-fit ${styles[mode]}`}>
-      <Card isEmpty={true} className="bg-white-gradient-1" />
-      {CardData.map((item) => (
-        <Card
-          header={item.header}
-          content={item.content}
-          name={item.name}
-          positon={item.positon}
-          avatar={item.avatar}
-        />
-      ))}
-      <Card isEmpty={true} className="bg-white-gradient-2" />
+    <div className="w-full inline-flex flex-nowrap gap-6">
+      <div className={`flex justify-center gap-6 w-fit ${animation[mode]}`}>
+        {CardData.map((item) => (
+          <Card
+            header={item.header}
+            content={item.content}
+            name={item.name}
+            positon={item.positon}
+            avatar={item.avatar}
+          />
+        ))}
+      </div>
+      <div className={`flex justify-center gap-6 w-fit ${animation[mode]}`} aria-hidden="true">
+        {CardData.map((item) => (
+          <Card
+            header={item.header}
+            content={item.content}
+            name={item.name}
+            positon={item.positon}
+            avatar={item.avatar}
+          />
+        ))}
+      </div>
     </div>
   );
 }
