@@ -108,15 +108,15 @@ export default function Footer() {
     },
   ];
   return (
-    <div className="my-10 md:my-56 scroll">
+    <div className="my-10 md:my-56">
       <div className="text-center">
-        <h1 className="text-2xl font-semibold">What Agents Are Saying</h1>
+        <h1 className="text-2xl font-semibold px-1">What Agents Are Saying</h1>
         <h2 className="text-base text-gray font-medium md:w-[30%] mx-auto pt-3 pb-6">
           Discover what our satisfied customers have to say about their
           experiences with our services
         </h2>
       </div>
-      <div className="flex flex-col gap-6 w-full overflow-hidden">
+      <div className="flex flex-col gap-6 w-full overflow-hidden scroll">
         <CardSlider CardData={CardData} mode="left" />
         <CardSlider CardData={CardData1} mode="right" />
       </div>
